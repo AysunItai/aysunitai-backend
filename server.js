@@ -13,8 +13,8 @@ app.get("/",async (req,res)=>{
 })
 
 app.get("/mails",async (req,res)=>{
-  //const mails = await getMails();
-  res.send('mails')
+  const mails = await getMails();
+  res.send(mails)
 
 })
 
