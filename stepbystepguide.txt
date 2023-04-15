@@ -1,0 +1,88 @@
+https://www.tutsmake.com/node-js-express-insert-data-from-form-into-mysql-database/
+1.create your schema file
+schema.sql
+2.connect to your local mysql database through terminal
+mysql -u root -p
+your password is :123456
+3.see your databases with 
+show databases; comment;
+4.do not forget the semicoluns
+5.create a new data base if you like
+6.create database databasename; comment.
+7.or write everything to schema file and copy paste
+8.you can see your tables with show tables; comment
+in mysql database;
+use databasename;
+to select a database
+
+9.create your package.json file with npm init
+10.install mysql library with mysql2 comment
+npm i mysql2
+11.add "type":"module" to package.json file
+11.create database.js file
+12.import mysql from 'mysql2'
+13.make the database connection
+14.i will ask to mysql to create a pool for make a connection to 
+database
+const pool=mysql.createPool({
+    host:'127.0.0.1',
+    user:'root',
+    password:123456,
+    database:'mywebsite_app'
+}).promise()
+and i turn it into a promise so i can use async await instead of callback function
+15.now lets run the code
+node database.js
+16.now lets use the pool object actually create the database
+17.then ask for the data from the database
+18.use enviroment 
+set your.env file
+install dorenv library
+npm i dotenv
+19.create functions to speak with database
+20.export all those functions
+21.now lets create another file called, app.js
+22.lets install express5 
+npm install "express@>=5.0.0-beta.1" --save
+23.in app.js
+import express from 'express';
+
+
+const app= express();
+
+
+app.use((err, req, res, next) => {
+  console.error(err.stack)
+  res.status(500).send('Something broke!')
+})
+
+24.thunder client window for sending requests from vs code?
+ctr+shift+R---open thunder client
+
+25.npm i -D nodemon
+"scripts": {
+    "dev": "npx nodemon app.js"
+  },
+26.start your app with 
+npm run dev
+27.app.use(express.json());
+any json body will be accepted and passed
+
+28.in front end in the form lets first do two way binding
+29.import usestate hook
+30.use value and also onchange events for two way binding
+31.for submiting this info on the fields;
+32.add onsubmit event on the form
+33.create handle submit function
+34.you want to prevent refreshing page onsubmit
+so prevent the default behaviour
+35.next you want to put everything into an object
+
+
+
+
+
+
+
+https://www.youtube.com/watch?v=Hej48pi_lOc&list=PLlVb6G4ibyQB5lbGzAPG4KANQr81ajIgI&index=179&t=949s
+https://www.youtube.com/watch?v=pJiRj02PkJQ
