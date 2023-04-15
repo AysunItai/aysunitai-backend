@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors'
 import { getMails,getTodaysMails,createMail} from './database.js';
+console.log(await getMails())
 
 const app= express();
 app.use(cors())
@@ -12,8 +13,8 @@ app.get("/",async (req,res)=>{
 })
 
 app.get("/mails",async (req,res)=>{
-  const mails = await getMails();
-  res.send(mails)
+  //const mails = await getMails();
+  res.send('mails')
 
 })
 
