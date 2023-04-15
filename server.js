@@ -30,7 +30,8 @@ app.post("/mails",async (req,res)=>{
 
 app.use((err, req, res, next) => {
   
-  res.status(500).send('Something broke!')
+  res.status(500).send('Something broke!');
+  console.log(err)
 })
 
 const port = process.env.PORT || 3000;
