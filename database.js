@@ -12,7 +12,8 @@ process.env.DATABASE_URL
 
    
 ).promise()
-
+console.log(pool)
+console.log(process.env.DATABASE_URL)
 export async  function getMails(){
     const [rows] = await pool.query("SELECT*FROM contacts");
     return rows;
