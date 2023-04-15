@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors'
 import { getMails,getTodaysMails,createMail} from './database.js';
-console.log(await getMails())
+//console.log(await getMails())
 
 const app= express();
 app.use(cors())
