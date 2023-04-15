@@ -5,6 +5,11 @@ import { getMails,getTodaysMails,createMail} from './database.js';
 const app= express();
 app.use(cors())
 app.use(express.json());
+app.get("/",async (req,res)=>{
+  
+  res.send('welcome')
+
+})
 
 app.get("/mails",async (req,res)=>{
   const mails = await getMails();
